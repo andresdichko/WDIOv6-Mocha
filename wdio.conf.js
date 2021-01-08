@@ -129,9 +129,9 @@ exports.config = {
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter.html
   //  reporters: ['spec'],
-  reporters: ['junit', { outputDir: './'   }],
+ // reporters: ['junit', { outputDir: './'   }],
 
- /*   reporters: ['spec', ['junit', {    outputDir: './' ,
+    reporters: ['spec', ['junit', {    outputDir: './' ,
     outputFileFormat: function (options){
      
      let today = new Date().toISOString().slice(0, 10) +'-'+ new Date().getHours() + new Date().getMinutes() + new Date().getSeconds(); 
@@ -140,7 +140,7 @@ exports.config = {
 
      return `results-${today}.xml`;
     }, }] ],
-*/
+
     
     //
     // Options to be passed to Mocha.
