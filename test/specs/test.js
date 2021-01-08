@@ -13,6 +13,7 @@ describe('My Login application', () => {
     });    it('should login with valid credentials2', () => {
         LoginPage.open();
 
+        
         LoginPage.login('tomsmith', 'SuperSecretPassword!');
         expect(SecurePage.flashAlert).toBeExisting();
         expect(SecurePage.flashAlert).toHaveTextContaining(
