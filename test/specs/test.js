@@ -9,6 +9,30 @@ describe('My Login application', () => {
         expect(SecurePage.flashAlert).toBeExisting();
         expect(SecurePage.flashAlert).toHaveTextContaining(
             'You logged into a secure area!');
+            
+    });    it('should login with valid credentials2', () => {
+        LoginPage.open();
+
+        LoginPage.login('tomsmith', 'SuperSecretPassword!');
+        expect(SecurePage.flashAlert).toBeExisting();
+        expect(SecurePage.flashAlert).toHaveTextContaining(
+            'You logged into a secure area!');
+
+    });    it('should login with valid credentials3', () => {
+        LoginPage.open();
+
+        LoginPage.login('tomsmith', 'SuperSecretPassword!');
+        expect(SecurePage.flashAlert).toBeExisting();
+        expect(SecurePage.flashAlert).toHaveTextContaining(
+            'You logged into a secure area!');
+
+    });    it('should login with valid credentials4', () => {
+        LoginPage.open();
+
+        LoginPage.login('tomsmith', 'SuperSecretPassword!');
+        expect(SecurePage.flashAlert).toBeExisting();
+        expect(SecurePage.flashAlert).toHaveTextContaining(
+            'You logged into a secure area!');
     });
 });
 
