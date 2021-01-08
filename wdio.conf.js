@@ -133,8 +133,12 @@ exports.config = {
 
     reporters: ['spec', ['junit', {    outputDir: './' ,
     outputFileFormat: function (options){
-        let today = new Date().toISOString().slice(0, 10)
-        return `results-${today}.xml`;
+     
+     let today = new Date().toISOString().slice(0, 10) +'-'+ new Date().getHours() + new Date().getMinutes() + new Date().getSeconds(); 
+     
+    
+
+     return `results-${today}.xml`;
     }, }] ],
 
     
