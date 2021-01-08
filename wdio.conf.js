@@ -131,7 +131,11 @@ exports.config = {
   //  reporters: ['spec'],
  // reporters: ['junit', { outputDir: './'   }],
 
-    reporters: ['spec', ['junit', {    outputDir: './'  }] ],
+    reporters: ['spec', ['junit', {    outputDir: './' ,
+    outputFileFormat: function (options){
+        let today = new Date().toISOString().slice(0, 10)
+        return `results-${today}.xml`;
+    }, }] ],
 
     
     //
