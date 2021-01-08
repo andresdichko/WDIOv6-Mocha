@@ -12,7 +12,7 @@ sh 'npm install'
 }
 stage('Test'){
 step{
-echo '...Testing...'
+echo '...Testing....'
 sh 'npm test'}
 }
 }
