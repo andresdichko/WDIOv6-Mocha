@@ -131,8 +131,15 @@ exports.config = {
   //  reporters: ['spec'],
  // reporters: ['junit', { outputDir: './'   }],
 
-   /* reporters: ['spec',np
-*/
+  /*  reporters: ['spec', ['junit', {    outputDir: './' ,
+    outputFileFormat: function (options){
+     
+     let today = new Date().toISOString().slice(0, 10) +'-'+ new Date().getHours() + new Date().getMinutes() + new Date().getSeconds(); 
+     
+    
+
+     return `results-${today}.xml`;
+    }, }] ],*/
  reporters: ["spec", "allure"],
 
     reporterOptions: {
@@ -142,6 +149,8 @@ exports.config = {
             disableWebdriverScreenshotsReporting: false,
         },
     },
+
+
     
     //
     // Options to be passed to Mocha.
@@ -229,11 +238,7 @@ exports.config = {
      */
     // afterTest: function(test, context, { error, result, duration, passed, retries }) {
     // },
-    afterTest: function (test, context, { error, result, duration, passed, retries }) {
-        if (error) {
-          browser.takeScreenshot();
-        }
-      }
+
 
     /**
      * Hook that gets executed after the suite has ended
