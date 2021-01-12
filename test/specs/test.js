@@ -31,7 +31,7 @@ describe('My Login application', () => {
 
     });    it('ERROR TEST', () => {
         LoginPage.open();
-        browser.pause(3000)
+        browser.pause(2000)
         title = browser.getTitle();
         assert.strictEqual(title, "Google Search");
         
