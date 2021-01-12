@@ -29,14 +29,12 @@ describe('My Login application', () => {
         expect(SecurePage.flashAlert).toHaveTextContaining(
             'You logged into a secure area!');
 
-    });    it('should login with valid credentials4', () => {
+    });    it('ERROR TEST', () => {
         LoginPage.open();
+        browser.pause(3000)
         title = browser.getTitle();
-        assert.strictEqual(title, "The name of the wind - Google Search");
-        //    LoginPage.login('tomsdsfsdmith', 'SuperSecretPassword!');
-     //   expect(SecurePage.flashAlert).toBeExisting();
-     //   expect(SecurePage.flashAlert).toHaveTextContaining(
-      //      'You logged into a secure area!');
+        assert.strictEqual(title, "Google Search");
+        
     });
 });
 
