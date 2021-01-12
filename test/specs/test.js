@@ -1,5 +1,6 @@
 const LoginPage = require('../pageobjects/login.page');
 const SecurePage = require('../pageobjects/secure.page');
+var assert = require("assert");
 
 describe('My Login application', () => {
     it('should login with valid credentials', () => {
@@ -30,8 +31,9 @@ describe('My Login application', () => {
 
     });    it('should login with valid credentials4', () => {
         LoginPage.open();
-        expect(browser).toHaveUrl('https://webdriver.io')
-    //    LoginPage.login('tomsdsfsdmith', 'SuperSecretPassword!');
+        title = browser.getTitle();
+        assert.strictEqual(title, "The name of the wind - Google Search");
+        //    LoginPage.login('tomsdsfsdmith', 'SuperSecretPassword!');
      //   expect(SecurePage.flashAlert).toBeExisting();
      //   expect(SecurePage.flashAlert).toHaveTextContaining(
       //      'You logged into a secure area!');
