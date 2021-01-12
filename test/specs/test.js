@@ -2,7 +2,7 @@ const LoginPage = require('../pageobjects/login.page');
 const SecurePage = require('../pageobjects/secure.page');
 
 describe('My Login application', () => {
-    it.only('should login with valid credentials', () => {
+    it('should login with valid credentials', () => {
         LoginPage.open();
 
         LoginPage.login('tomsmith', 'SuperSecretPassword!');
@@ -10,7 +10,8 @@ describe('My Login application', () => {
         expect(SecurePage.flashAlert).toHaveTextContaining(
             'You logged into a secure area!');
             
-    });    it('should login with valid credentials2', () => {
+    }); 
+       it('should login with valid credentials2', () => {
         LoginPage.open();
 
 
