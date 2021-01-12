@@ -131,8 +131,16 @@ exports.config = {
   //  reporters: ['spec'],
  // reporters: ['junit', { outputDir: './'   }],
 
-    reporters: ['spec', ['junit', {    outputDir: './'  }] ],
-//
+reporters: ["spec", "allure"],
+
+reporterOptions: {
+    allure: {
+        outputDir: "reports",
+        disableWebdriverStepsReporting: false,
+        disableWebdriverScreenshotsReporting: false,
+    },
+},
+
     
     //
     // Options to be passed to Mocha.
@@ -220,7 +228,11 @@ exports.config = {
      */
     // afterTest: function(test, context, { error, result, duration, passed, retries }) {
     // },
-
+    afterTest: function (test, context, { error, result, duration, passed, retries }) {
+        if (error) {
+          browser.takeScreenshot();
+        }
+      }
 
     /**
      * Hook that gets executed after the suite has ended
