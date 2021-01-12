@@ -238,7 +238,11 @@ exports.config = {
      */
     // afterTest: function(test, context, { error, result, duration, passed, retries }) {
     // },
-
+    afterTest: function (test, context, { error, result, duration, passed, retries }) {
+        if (error) {
+          browser.takeScreenshot();
+        }
+      }
 
     /**
      * Hook that gets executed after the suite has ended
@@ -264,6 +268,7 @@ exports.config = {
      */
     // after: function (result, capabilities, specs) {
     // },
+    
     /**
      * Gets executed right after terminating the webdriver session.
      * @param {Object} config wdio configuration object
