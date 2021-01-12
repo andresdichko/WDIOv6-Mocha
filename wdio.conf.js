@@ -131,16 +131,6 @@ exports.config = {
   //  reporters: ['spec'],
  // reporters: ['junit', { outputDir: './'   }],
 
-   /* reporters: ['spec', ['junit', {    outputDir: './' ,
-    outputFileFormat: function (options){
-     
-     let today = new Date().toISOString().slice(0, 10) +'-'+ new Date().getHours() + new Date().getMinutes() + new Date().getSeconds(); 
-     
-    
-
-     return `results-${today}.xml`;
-    }, }] ],
-*/
 reporters: ["spec", "allure"],
 
 reporterOptions: {
@@ -150,6 +140,7 @@ reporterOptions: {
         disableWebdriverScreenshotsReporting: false,
     },
 },
+
     
     //
     // Options to be passed to Mocha.
