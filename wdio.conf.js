@@ -131,16 +131,17 @@ exports.config = {
   //  reporters: ['spec'],
  // reporters: ['junit', { outputDir: './'   }],
 
-reporters: ["spec", "allure"],
+   /* reporters: ['spec',np
+*/
+ reporters: ["spec", "allure"],
 
-reporterOptions: {
-    allure: {
-        outputDir: "reports",
-        disableWebdriverStepsReporting: false,
-        disableWebdriverScreenshotsReporting: false,
+    reporterOptions: {
+        allure: {
+            outputDir: "reports",
+            disableWebdriverStepsReporting: false,
+            disableWebdriverScreenshotsReporting: false,
+        },
     },
-},
-
     
     //
     // Options to be passed to Mocha.
