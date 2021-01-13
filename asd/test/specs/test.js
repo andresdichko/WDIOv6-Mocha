@@ -29,7 +29,7 @@ describe('My Login application', () => {
         expect(SecurePage.flashAlert).toHaveTextContaining(
             'You logged into a secure area!');
 
-    });    it('ERROR TEST', () => {
+    });    it('ERROR TEST 99876', () => {
         LoginPage.open();
         browser.pause(2000)
         title = browser.getTitle();
