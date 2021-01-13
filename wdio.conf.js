@@ -131,8 +131,15 @@ exports.config = {
   //  reporters: ['spec'],
  // reporters: ['junit', { outputDir: './'   }],
 
-   /* reporters: ['spec',np
-*/
+  /*  reporters: ['spec', ['junit', {    outputDir: './' ,
+    outputFileFormat: function (options){
+     
+     let today = new Date().toISOString().slice(0, 10) +'-'+ new Date().getHours() + new Date().getMinutes() + new Date().getSeconds(); 
+     
+    
+
+     return `results-${today}.xml`;
+    }, }] ],*/
  reporters: ["spec", "allure"],
 
     reporterOptions: {
@@ -142,13 +149,15 @@ exports.config = {
             disableWebdriverScreenshotsReporting: false,
         },
     },
+
+
     
     //
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/
     mochaOpts: {
         ui: 'bdd',
-        timeout: 60000
+        timeout: 90000
     },
     //
     // =====
@@ -259,6 +268,7 @@ exports.config = {
      */
     // after: function (result, capabilities, specs) {
     // },
+    
     /**
      * Gets executed right after terminating the webdriver session.
      * @param {Object} config wdio configuration object

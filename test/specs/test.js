@@ -1,8 +1,9 @@
 const LoginPage = require('../pageobjects/login.page');
 const SecurePage = require('../pageobjects/secure.page');
+var assert = require("assert");
 
 describe('My Login application', () => {
-    it.only('should login with valid credentials', () => {
+    it('should login with valid credentials', () => {
         LoginPage.open();
 
         LoginPage.login('tomsmith', 'SuperSecretPassword!');
@@ -10,7 +11,8 @@ describe('My Login application', () => {
         expect(SecurePage.flashAlert).toHaveTextContaining(
             'You logged into a secure area!');
             
-    });    it('should login with valid credentials2', () => {
+    }); 
+       it('should login with valid credentials2', () => {
         LoginPage.open();
 
 
@@ -27,14 +29,14 @@ describe('My Login application', () => {
         expect(SecurePage.flashAlert).toHaveTextContaining(
             'You logged into a secure area!');
 
-    });    it('should login with valid credentials4', () => {
+    });    it('ERROR TEST', () => {
         LoginPage.open();
-
-        LoginPage.login('tomsdsfsdmith', 'SuperSecretPassword!');
-        expect(SecurePage.flashAlert).toBeExisting();
-        expect(SecurePage.flashAlert).toHaveTextContaining(
-            'You logged into a secure area!');
+        browser.pause(2000)
+        title = browser.getTitle();
+        assert.strictEqual(title, "Google Search");
+        
     });
 });
+
 
 
