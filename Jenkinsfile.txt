@@ -9,8 +9,7 @@ pipeline {
         }
 	    stage('Test'){
 		    
-		steps {sh "cd ./asd"
-			sh "npm test"
+		steps {sh "npm test"
         }
 	    }
       
