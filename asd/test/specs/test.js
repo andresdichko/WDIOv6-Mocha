@@ -34,7 +34,7 @@ describe('My Login application', () => {
 <<<<<<< Updated upstream
         browser.pause(2000)
 =======
-        browser.pause(3001)
+        browser.pause(3002)
 >>>>>>> Stashed changes
         title = browser.getTitle();
         assert.strictEqual(title, "Google Search");
