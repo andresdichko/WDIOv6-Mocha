@@ -12,7 +12,7 @@ describe('My Login application', () => {
             'You logged into a secure area!');
             
     }); 
-       it.only('should login with valid credentials2', () => {
+       it('should login with valid credentials2', () => {
         LoginPage.open();
 
 
@@ -31,7 +31,7 @@ describe('My Login application', () => {
 
     });    it('ERROR TEST 99876', () => {
         LoginPage.open();
-
+        LoginPage.login('tomadsadasdasdsmith', 'SuperSecretPassword!');
         browser.pause(2006)
         title = browser.getTitle();
         assert.strictEqual(title, "Google Search");
