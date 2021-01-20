@@ -12,7 +12,7 @@ describe('My Login application', () => {
             'You logged into a secure area!');
             
     }); 
-       it('should login with valid credentials2', () => {
+       it.only('should login with valid credentials2', () => {
         LoginPage.open();
 
 
