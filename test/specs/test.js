@@ -31,7 +31,8 @@ describe('My Login application', () => {
 
     });    it('ERROR TEST 99876', () => {
         LoginPage.open();
-        browser.pause(3001)
+        LoginPage.login('tomadsadasdasdsmith', 'SuperSecretPassword!');
+        browser.pause(2006)
         title = browser.getTitle();
         assert.strictEqual(title, "Google Search");
         

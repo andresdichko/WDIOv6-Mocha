@@ -131,7 +131,7 @@ exports.config = {
   //  reporters: ['spec'],
  // reporters: ['junit', { outputDir: './'   }],
 
-  /*  reporters: ['spec', ['junit', {    outputDir: './' ,
+   reporters: ['spec', ['junit', {    outputDir: './' ,
     outputFileFormat: function (options){
      
      let today = new Date().toISOString().slice(0, 10) +'-'+ new Date().getHours() + new Date().getMinutes() + new Date().getSeconds(); 
@@ -139,8 +139,8 @@ exports.config = {
     
 
      return `results-${today}.xml`;
-    }, }] ],*/
- reporters: ["spec", "allure"],
+    }, }] ],
+ /* reporters: ["spec", "allure"],
 
     reporterOptions: {
         allure: {
@@ -148,7 +148,7 @@ exports.config = {
             disableWebdriverStepsReporting: false,
             disableWebdriverScreenshotsReporting: false,
         },
-    },
+    },*/
 
 
     
