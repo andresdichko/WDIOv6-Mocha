@@ -31,11 +31,8 @@ describe('My Login application', () => {
 
     });    it('ERROR TEST 99876', () => {
         LoginPage.open();
-<<<<<<< Updated upstream
+
         browser.pause(2000)
-=======
-        browser.pause(3002)
->>>>>>> Stashed changes
         title = browser.getTitle();
         assert.strictEqual(title, "Google Search");
         
