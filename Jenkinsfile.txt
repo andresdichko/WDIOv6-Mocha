@@ -10,9 +10,19 @@ pipeline {
 	    stage('Test'){
 		    
 		steps {sh "npm test"
+sh "allure generate --clean"
+sh "allure open"
         }
 	    }
       
     }
+	post {
+      always {
+        junit '**/reports/junit/*.xml'
+      }
+   } 
 }
+
+
+
 
